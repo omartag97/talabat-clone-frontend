@@ -1,0 +1,226 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5 bg-white ">
+
+            <div class="row">
+                <div class="col-sm-12 mb-4 col-md-12 pa-0 d-flex">
+
+                    <div class="btn-group p-0 col-6 m-0"><button (click)="showPending()" id="menuButton"
+                            class="btn "><span class="pr-2 hidden"><img
+                                    src="https://www.talabat.com/assets/images/menu-ico.svg" height="25"></span><span
+                                class="title f-18 f-m-15">Pending Orders</span></button>
+                    </div>
+
+                    <div class="btn-group p-0  col-6 m-0"><button (click)="showPrev()" id="infoButton" class="btn "
+                            style="width: 50%;"><span class="pr-2 hidden">
+                                <img src="https://www.talabat.com/assets/images/icon_info_menu.svg"
+                                    height="25"></span><span class="title f-18 f-m-15">Previous Orders</span></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="pending">
+                <div class=" col-10 m-auto mb-5 border rder-summary" id={{item.id}} *ngFor="let item of data">
+                    <div class="panel-heading">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="f-20 h3 v-middle">Order Number {{item.id}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="f-20 h5 v-middle">Order Date : {{item.created_at}}</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+
+                    <div class="panel-body">
+
+                        <div class="table-order-items">
+                            <table class="table m-a-0 m-t f-12-m">
+                                <tbody>
+                                    <tr class="bg-light">
+                                        <th><b class="f-14 f-13-m">Item(s)</b></th>
+
+                                        <th class="text-center"><b class="f-14 f-13-m">Qty</b></th>
+                                        <th class="text-center item-price"><b class="f-14 f-13-m">Price</b></th>
+                                        <th class="text-center total"><b class="f-14 f-13-m">Total</b></th>
+                                    </tr>
+                                    <!--ng for-->
+                                    <tr class="ng-scope" *ngFor="let product of item.products">
+                                        <!--*ngFor="let item of checkOut"-->
+                                        <td class="v-middle">
+                                            <p class="m-a-0"><b> {{product.name}}</b></p>
+                                            <!--{{item.name}}-->
+                                            <p class="text-727272 m-a-0 ng-binding"></p>
+                                        </td>
+
+                                        <td class="text-center v-middle ">{{product.product_count}} </td>
+                                        <!---{{getCount(item.id)}}-->
+
+                                        <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{product.price}} </td>
+                                        <!--{{item.price}}-->
+
+                                        <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{product.product_count
+                                            * product.price}}</td>
+                                        <!--{{item.price *
+                              getCount(item.id)}}-->
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="d-flex px-5  justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p class="text-center"><b>SubTotal</b></p>
+                            </div>
+                            <div>
+                                <p class="text-center"><b>{{getSub(item.id)}}</b></p>
+                            </div>
+                        </div>
+                        <div class="d-flex px-5 text-center justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p class="text-center"><b>Delivery Fee</b></p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-center"><b>{{item.delivery_fee}}</b></p>
+                            </div>
+                        </div>
+                        <div class="d-flex px-5  justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p><b>Total</b></p>
+                            </div>
+                            <div>
+                                <p><b>{{getSub(item.id) + item.delivery_fee}}</b></p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex mb-2 justify-content-between  m-0 p-0">
+                            <div class="text-center col-6 text-nowrap "> <button (click)="setstatus('accepted',item.id)"
+                                    type="button" class="btn  col-12 btn-success">Accepted Your Order</button></div>
+                            <div class="text-center  col-6 text-nowrap "> <button
+                                    (click)="setstatus('rejected',item.id)" type="button"
+                                    class="btn  col-12 btn-danger">Rejected Your Order</button> </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <br>
+                <br>
+
+            </div>
+
+            <div id="prev">
+
+                <div class=" col-10 m-auto mb-5 border rder-summary" id={{item.id}} *ngFor="let item of dataPrev">
+                    <div class="panel-heading">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="f-20 h3 v-middle">Order Number {{item.id}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="f-20 h5 v-middle">Order Date : {{item.created_at}}</td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+
+                    <div class="panel-body">
+
+                        <div class="table-order-items">
+                            <table class="table m-a-0 m-t f-12-m">
+                                <tbody>
+                                    <tr class="bg-light">
+                                        <th><b class="f-14 f-13-m">Item(s)</b></th>
+
+                                        <th class="text-center"><b class="f-14 f-13-m">Qty</b></th>
+                                        <th class="text-center item-price"><b class="f-14 f-13-m">Price</b></th>
+                                        <th class="text-center total"><b class="f-14 f-13-m">Total</b></th>
+                                    </tr>
+                                    <!--ng for-->
+                                    <tr class="ng-scope" *ngFor="let product of item.products">
+                                        <!--*ngFor="let item of checkOut"-->
+                                        <td class="v-middle">
+                                            <p class="m-a-0"><b> {{product.name}}</b></p>
+                                            <!--{{item.name}}-->
+                                            <p class="text-727272 m-a-0 ng-binding"></p>
+                                        </td>
+
+                                        <td class="text-center v-middle ">{{product.product_count}} </td>
+                                        <!---{{getCount(item.id)}}-->
+
+                                        <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{product.price}} </td>
+                                        <!--{{item.price}}-->
+
+                                        <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{product.product_count
+                                            * product.price}}</td>
+                                        <!--{{item.price *
+                              getCount(item.id)}}-->
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="d-flex px-5  justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p class="text-center"><b>SubTotal</b></p>
+                            </div>
+                            <div>
+                                <p class="text-center"><b>{{getSub(item.id)}}</b></p>
+                            </div>
+                        </div>
+                        <div class="d-flex px-5 text-center justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p class="text-center"><b>Delivery Fee</b></p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-center"><b>{{item.delivery_fee}}</b></p>
+                            </div>
+                        </div>
+                        <div class="d-flex px-5  justify-content-between  m-0 p-0">
+                            <div class="text-center">
+                                <p><b>Total</b></p>
+                            </div>
+                            <div>
+                                <p><b>{{getSub(item.id) + item.delivery_fee}}</b></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <br>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>

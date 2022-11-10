@@ -1,0 +1,213 @@
+<div class="container">
+  <div class="row m-auto">
+    <div class="col border m-auto">
+
+
+
+      <div class="col-12 bg-success text-center shadow-sm p-3 mb-5 bg-white ">
+        <span class="d-inline-block text-uppercase d-flex flex-row-reverse align-content-center p-3 ">
+          <a class="btn btn-outline-warning  d-block" rel="noopener noreferrer" href="/login">Vendor Portal</a></span>
+      </div>
+
+      <div class="m-auto col-8">
+        <h1>Join MENA's leading delivery app</h1>
+        <hr style="color: #ff5a00;" />
+
+        <p class="mb-2">Join an ever-growing community of businesses in the Middle East and grow together with us.
+        </p>
+        <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>store
+              name</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Enter store name"
+                [(ngModel)]="form.store_name" required name="email"><br>
+            </div>
+          </div>
+
+          <div class="input-group mb-3 ">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>type</label>
+
+            <select class="custom-select" name="type" [(ngModel)]="form.type">
+
+              <option selected>Choose...</option>
+
+              <option>American </option>
+              <option>Arabic</option>
+              <option>Armenian</option>
+              <option>Asian</option>
+              <option>Beverages</option>
+              <option>Breakfast</option>
+              <option>Burgers</option>
+              <option>Cafe</option>
+              <option>Cakes & Bakery</option>
+              <option>Chinese</option>
+              <option>Chocolate</option>
+              <option>Coffee </option>
+              <option>Combo</option>
+              <option>Desserts</option>
+              <option>Egyptian</option>
+              <option>Emirati</option>
+              <option>Fast Food</option>
+              <option>Fried Chicken</option>
+              <option>Frozen Yoghurt</option>
+              <option>Grill</option>
+              <option>Grocery</option>
+              <option>Healthy Food</option>
+              <option>Hot Dogs</option>
+              <option>Ice cream</option>
+              <option>Indian</option>
+              <option>International</option>
+              <option>Iranian</option>
+              <option>Italian</option>
+              <option>Japanese</option>
+              <option>Juices</option>
+              <option>Kurdish</option>
+              <option>Kuwaiti</option>
+              <option>Lebanese</option>
+              <option>Mandi</option>
+              <option>Mexican</option>
+              <option>Pakistani</option>
+              <option>Pasta</option>
+              <option>Pastries</option>
+              <option>Pizza</option>
+              <option>Roastery</option>
+              <option>Salads</option>
+              <option>Sandwiches</option>
+              <option>Seafood</option>
+              <option>Shawarma & Doner</option>
+              <option>Sliders</option>
+              <option>Smoothie</option>
+              <option>Steak</option>
+              <option>Thai</option>
+              <option>Turkish</option>
+              <option>Vegetarian</option>
+              <option>Wings</option>
+            </select>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>first
+              name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" [(ngModel)]="form.first_name" placeholder="first name.."
+                name="fName"><br>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>last
+              name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="last name.." [(ngModel)]="form.last_name"
+                name="lName"><br>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Mobile
+              Number</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="number.." [(ngModel)]="form.phone" name="phone"><br>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="address" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Your Address</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="password" [(ngModel)]="form.address" name="address"><br>
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Your
+              Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" [(ngModel)]="form.email"
+                placeholder="Enter your email.." name="email"><br>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Your
+              Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="password" [(ngModel)]="form.password" name="password"><br>
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+            <label for="confirm" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Confirm
+              Password</label>
+            <div class="col-sm-10">
+              <input type="passowrd" class="form-control" id="confirm" [(ngModel)]="form.confirm_password"
+                name="confirm_password"><br>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="description" class="col-sm-2 col-form-label"><span
+                style="color: blue;">*</span>Desription</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="description" [(ngModel)]="form.description"
+                name="description"></textarea><br>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Your Log</label>
+            <div class="col-sm-10">
+              <input type="file" name="image" class="file-input form-conrol" (change)="updateImageFile($event)"
+                #fileUpload>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><span style="color: blue;">*</span>Your
+              Loctaion</label>
+
+            <div class="col-sm-10 text-center">
+              <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"></agm-marker>
+              </agm-map>
+              <br><br>
+              <input type="text" class="form-control" id="addres" name="details" value={{deaddress.address.LongLabel}}>
+
+
+            </div>
+
+          </div>
+          <div class="alert alert-warning" *ngIf="!isEnabled">
+            Enable Location!<br />
+          </div>
+
+
+
+          <div class="col-12 ">
+            <button type="submit" class="btn col-12 " style="background-color: #ff5a00; color: white; ">Sign up</button>
+          </div>
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }}
+          </div>
+
+
+
+        </form>
+
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          <p>{{data.name}}</p>
+          <p>{{data.email}}</p>
+          Your registration is successful!
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.btn-primary{
+    background-color: #ff5a00 !important;
+}
+
+
+.btn-outline-warning{
+  color: #ff5a00 !important;
+  border: 1px solid #ff5a00 ;
+}
+
+.btn-outline-warning :hover{
+  background-color: none;
+  color: none;
+
+}
+
+agm-map {
+  height: 300px;
+}

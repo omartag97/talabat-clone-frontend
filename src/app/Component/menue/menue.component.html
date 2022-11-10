@@ -1,0 +1,360 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5 bg-white ">
+
+            <div class="breadcrumb-container mt-4 mb-3">
+                <div class="bread-crumbstyles__BreadCrumbContainer-sc-y5tyix-0 fTQiaX mb-5 mb-m-3">
+                    <a href="/" class="text-dark">Home</a>
+
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10 primary-text mx-4 f-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="20" width="20" color="#ff5a00">
+
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+
+                    </svg>
+
+                    <a href="/egypt/restaurants/7142">{{restInfo.region}}</a>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10 primary-text mx-4 f-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="20" width="20" color="#ff5a00">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+                    <span class="last-breadcrumb text-dark">{{restInfo.name}}</span>
+                </div>
+            </div>
+
+
+            <div class="menu-header-container pt-2">
+                <div class="menu-header-infostyle__MenuHeaderInfoContainer-sc-14ca1fm-0 fQzYrH">
+                    <div class="pt-2">
+                        <div class="media rest-media"><a href="">
+                                <div class="rest-logo-bg border mr-4 mr-m-2 b-a">
+                                    
+                                    <img src={{restInfo.image}} width="120px" height="120px" alt="Genoise">
+                                </div>
+                            </a>
+                            <div class="media-body ">
+                                <div class="row d-flex">
+                                    <div class="col-10 ">
+                                        <p class=" col-6  m-0 text-dark"><a
+                                                style="text-decoration: none; font-size: 25px;">{{restInfo.name}}</a>
+                                        </p>
+                                        <p><span
+                                                class=" col-4 text-muted">in&nbsp;{{restInfo.region}},&nbsp;Egypt</span>
+                                        </p>
+
+                                    </div>
+                                    <div class="col-2 f-15-m rest-status">
+                                        <span class="h5 menu-open f-14 OPEN f-400 green-text">OPEN</span>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 mb-1 d-flex">
+                                    <div class="col-sm-10 col-16 p-r-0">
+                                        <p><span class=" col-4 text-muted">{{restInfo.type}}</span></p>
+                                    </div>
+                                    <div class="col-sm-2 col-12 mt-m-2 f-15-m rating">
+                                        <div class="rate">
+
+                                            <div class="ml-1 f-m-13">Very good</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 d-flex">
+                                    <div class=" col-10 col-sm-10 p-r-0">
+                                        <p><span class=" col-4 text-muted"> Min.
+                                                order:&nbsp;{{restInfo.minOrder}}</span>
+                                        </p>
+                                    </div>
+                                    <div class=" col-sm-2 f-15-m ">
+                                        <div class="payments m-0">
+                                            <div class="d-flex justify-content-end ml-0 mt-m-1">
+                                                <img class="mr-2 ml-0"
+                                                    src="https://www.talabat.com/assets/images/visa_blue.png" width="35"
+                                                    height="20">
+                                                <img class="mr-2"
+                                                    src="https://www.talabat.com/assets/images/logo-mastercard.svg"
+                                                    width="33" height="20"><img class=""
+                                                    src=" https://www.talabat.com/assets/images/logo-cash.svg"
+                                                    width="30" height="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--ng if live tracking-->
+                    <div *ngIf="getLive()"
+                        class="col-xs-12 info-row pa-2 mt-2 d-flex align-items-center p-2 alert alert-warning">
+                        <div class="px-2">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle"
+                                class="svg-inline--fa fa-info-circle fa-w-16 fa-2x search-fa f-18" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>Delivered by us, with live tracking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5 bg-white ">
+
+
+
+
+            <div class="mt-2">
+                <div class="">
+                    <div class="row">
+                        <div class="b-b mb-4 col-12">
+                            <div class="col-sm-12 col-md-12 pa-0 d-flex">
+
+                                <div class="btn-group col-6 m-0"><button (click)="showMenu()" id="menuButton"
+                                        class="btn "><span class="pr-2 hidden"><img
+                                                src="https://www.talabat.com/assets/images/menu-ico.svg"
+                                                height="25"></span><span class="title f-18 f-m-15">Menu</span></button>
+                                </div>
+
+                                <div class="btn-group col-6 m-0"><button (click)="showInfo()" id="infoButton"
+                                        class="btn " style="width: 50%;"><span class="pr-2 hidden">
+                                            <img src="https://www.talabat.com/assets/images/icon_info_menu.svg"
+                                                height="25"></span><span class="title f-18 f-m-15">Info</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <div class="col-md-8">
+
+                            <div id="info" class="info-tabstyle__InfoTabContainer-sc-11prn2r-0 hfZffp">
+                                <div class="f-18 f-m-13 pb-2 f-500 mb-2 pl-0">&nbsp;{{restInfo.name}}</div>
+                                <div class="info-tbl">
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Minimum Order Amount</div>
+                                        <div class="f-500 value-div undefined">&nbsp;{{restInfo.minOrder}}</div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Working Hours</div>
+                                        <div class="f-500 value-div undefined">&nbsp;{{restInfo.workingHours}}</div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Delivery Time</div>
+                                        <div class="f-500 value-div undefined">&nbsp;{{restInfo.deliveryTime}}</div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Delivery fee</div>
+                                        <div class="f-500 value-div">&nbsp; EGP {{restInfo.deliveryFee}}</div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Pre-Order</div>
+                                        <div class="f-500 value-div text-capitalize">&nbsp;No</div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 mr-4 label-div">Payment</div>
+                                        <div class="f-500 value-div undefined">
+                                            <div
+                                                class="accepted-paymentsstyles__PaymentMethodContainer-sc-d6a9ap-0 gttoGG d-flex payment-method">
+                                                <img class="mr-2"
+                                                    src="https://www.talabat.com/assets/images/visa_blue.png"
+                                                    alt="Visa payment available" width="35" height="20">
+                                                <img class="mr-2"
+                                                    src="https://www.talabat.com/assets/images/logo-mastercard.svg"
+                                                    alt="Mastercard payment available" width="33" height="20"><img
+                                                    class="" src="https://www.talabat.com/assets/images/logo-cash.svg"
+                                                    alt="Cash payment available" width="30" height="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Rating</div>
+                                        <div class="f-500 value-div undefined">
+                                            <div
+                                                class="rating-displaystyles__RatingDisplayContainer-sc-19r5mol-0 bQjMOm">
+                                                <div class="rating-word pl-4 f-14 ratingVeryGood">
+                                                    <div class="ml-1 undefined">Very good</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 b-t">
+                                        <div class="pl-0 f-500 label-div">Cuisines:</div>
+                                        <div class="f-500 value-div undefined">{{restInfo.cuisines}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu" class="col-12">
+                                <div class="col-12" *ngFor="let item of restMenu">
+
+                                    <div class="card col-12 row" style=" cursor:pointer">
+
+                                        <div class="d-flex justify-content-between">
+
+                                            <div class="card-body col-4  m-0">
+                                                <img style="width:80%; height: 80%; border: 1px solid black;"
+                                                    src={{item.image}} alt="gggggggg">
+
+                                            </div>
+
+                                            <div class="card-body col-5 m-0">
+                                                <span class="card-text">{{item.name}}</span>
+                                            </div>
+
+                                            <div class="card-body col-3 m-0 ">
+                                                <div class="justify-content-center mb-4"><span
+                                                        class="card-text">{{item.price}}</span></div>
+                                                <div (click)="add(item.id, item.price)" class="ml-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                        fill="currentColor" color="green" class="bi bi-plus-circle-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="card  mb-3" style="max-width: 100%;">
+                                <div class="card-header"
+                                    style="background-color: #ff5a00; color: white; font-size: 1.75rem;">Your Cart</div>
+
+
+                                <div class="card-body text-center  text-dark bg-light" *ngIf="cartArr.length == 0">
+                                    <div class="col-12 text-center"><img
+                                            src="https://www.talabat.com/assets/images/empty-cart.svg" width="50%"
+                                            height="70%" alt=""></div>
+                                    <h6 class="card-title mt-4 ">There is no items in your cart </h6>
+
+                                </div>
+
+                                <div class="card-body text-center   bg-white" *ngIf="cartArr.length != 0">
+                                    <!---->
+                                    <div class="cart-boxstyles__CartContainer-sc-18sgu4y-0 gIMzlM">
+                                        <div class="text-left pa-2   f-500 f-16">{{restInfo.name}}<span
+                                                class="f-14 text-muted"> - Asafra</span></div>
+
+
+                                        <div class="items mt-2 bg-light">
+                                            <hr>
+
+                                            <div class="d-flex justify-content-between align-items-start mb-2"
+                                                *ngFor="let item of checkOut">
+
+                                                <div class="btn-group border bg-white">
+                                                    <button type="button" (click)="decrease(item.id)"
+                                                        class="btn border-right">
+                                                        <svg aria-hidden="true" width="20" height="20" color="#ff5a00"
+                                                            focusable="false" data-prefix="fas" data-icon="minus"
+                                                            class="m-auto" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 448 512">
+                                                            <path fill="currentColor"
+                                                                d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
+                                                            </path>
+                                                        </svg>
+
+                                                        <span class="visually-hidden">Button</span>
+                                                    </button>
+                                                    <button class="btn ">
+                                                        <div>
+                                                            {{getCount(item.id)}}
+                                                        </div>
+
+                                                    </button>
+                                                    <button type="button" (click)="increase(item.id)"
+                                                        class="btn border-left">
+                                                        <svg aria-hidden="true" width="20" height="20" color="#ff5a00"
+                                                            focusable="false" data-prefix="fas" data-icon="plus"
+                                                            class="svg-inline--fa fa-plus fa-w-14 " role="img"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                            <path fill="currentColor"
+                                                                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="visually-hidden">Button</span>
+                                                    </button>
+                                                </div>
+
+                                                <span class="item-name f-500 f-12">{{item.name}} </span>
+                                                <span class="currency f-12 f-500">{{item.price * getCount(item.id)}}
+                                                </span>
+
+                                            </div>
+
+
+                                            <hr>
+
+                                        </div>
+
+                                        <div class="pa-2">
+                                            <div class="d-flex justify-content-between mb-2 dark-gray">
+                                                <span>Subtotal</span><span><span
+                                                        class="currency-symbol ">EGP&nbsp;</span> <span
+                                                        class="currency ">{{subTotal}}</span></span></div>
+                                            <div class="d-flex justify-content-between mb-2"><span
+                                                    class="f-500">Delivery fee</span><span><span
+                                                        class="currency-symbol ">EGP&nbsp;</span> <span
+                                                        class="currency ">{{restInfo.deliveryFee}}</span></span></div>
+                                            <div class="d-flex justify-content-between mt-4 mb-3"><span
+                                                    class="f-14 f-500">Total Amount</span><span><span
+                                                        class="currency-symbol f-14 f-500">EGP&nbsp;</span> <span
+                                                        class="currency f-14 f-500">{{subTotal + restInfo.deliveryFee
+                                                        }}</span></span>
+                                            </div>
+                                            <div class="d-flex"><button (click)="  routeToCheckout()"
+                                                    class="btn btn-success text-uppercase col-12">Proceed to
+                                                    Checkout</button>
+                                            </div>
+                                        </div>
+                                        <div class="text-center pa-2">
+                                            <p class="f-14 f-500 mb-0"></p>
+                                        </div>
+                                    </div>
+
+
+                                    <!---->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,243 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5 bg-white ">
+
+
+            <div class="breadcrumb-container mt-4 mb-3">
+                <div class="bread-crumbstyles__BreadCrumbContainer-sc-y5tyix-0 fTQiaX mb-5 mb-m-3">
+                    <a href="/" class="text-dark" style="text-decoration: none;">Home</a>
+
+
+
+
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10 primary-text mx-4 f-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="20" width="20" color="#ff5a00">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+
+                    <a href="/" class="text-dark" style="text-decoration: none;">{{getRestName()}}</a>
+
+
+
+
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10 primary-text mx-4 f-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="20" width="20" color="#ff5a00">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+
+                    <span class="text-dark">checkout</span>
+
+                </div>
+            </div>
+
+
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle" style="">Order Summary</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row f-14">
+                        <div class="col-sm-10 m-t h5 m-t-0-m">{{getRestName()}}</div>
+                    </div>
+
+                    <div class="table-order-items">
+                        <table class="table m-a-0 m-t f-12-m">
+                            <tbody>
+                                <tr class="bg-light">
+                                    <th><b class="f-14 f-13-m">Item(s)</b></th>
+
+                                    <th class="text-center"><b class="f-14 f-13-m">Qty</b></th>
+                                    <th class="text-center item-price"><b class="f-14 f-13-m">Price</b></th>
+                                    <th class="text-center total"><b class="f-14 f-13-m">Total</b></th>
+                                </tr>
+                                <!--ng for-->
+                                <tr class="ng-scope" *ngFor="let item of checkOut">
+                                    <td class="v-middle">
+                                        <p class="m-a-0"><b> {{item.name}}</b></p>
+                                        <p class="text-727272 m-a-0 ng-binding"></p>
+                                    </td>
+
+                                    <td class="text-center v-middle ">{{getCount(item.id)}}</td>
+
+                                    <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{item.price}}</td>
+
+                                    <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{item.price *
+                                        getCount(item.id)}}</td>
+
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+
+
+
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle">Delivery Adress</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row f-14">
+                        <p class="m-b-0 h6">Address Name:&nbsp;
+                            <span>{{address.address_name}}&nbsp;
+                            </span>
+                        </p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row f-14">
+                            <p class="m-b-0 h6">Area:&nbsp;
+                                <span>{{address.address_details}}&nbsp;
+                                </span>
+                            </p>
+                        </div>
+                        <div class="row f-14">
+                            <p class="m-b-0 h6">Mobile:&nbsp;
+                                <span>{{address.mobile}}&nbsp;
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+
+
+
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle" style="">Add special requests here.</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <form>
+                    <textarea  type="text" id="request" class="form-control"  rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label text-muted">Do not add chargeable items,
+                        as this may cause your order to be cancelled.</label>
+                        </form>
+
+                </div>
+
+            </div>
+
+<br><br>
+<div class=" col-10 m-auto border rder-summary">
+    <div class="panel-heading">
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td class="f-20 h3 v-middle" style="">Payment Summary</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="mb-3 d-flex justify-content-between p-4">
+        <div class="col-6 ">
+            <form class="col-12">
+
+            <div id="credit" class="form-check p-3  mb-3 shadow-sm">
+                <input   (click)="select('credit')"  class="form-check-input ml-1" type="radio" name="flexRadioDefault">
+                <label class="form-check-label ml-5" for="flexRadioDefault1">
+                    <img src="https://www.talabat.com/images/talabat/checkout-cc.svg" width="35px" height="25px">
+                    <span class="h6">&nbsp;Debit/Credit Card</span>
+                </label>
+            <div *ngIf="creditSelected" >
+               <hr>
+                <form>
+                    <input type="text">
+                    <input type="text">
+                </form>
+            </div>
+            </div>
+            <div id="cash" class="form-check    p-3 shadow-sm" >
+                <input (click)="select('cash')" class="form-check-input ml-1" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label ml-5" for="flexRadioDefault2">
+                    <img src="https://www.talabat.com/images/talabat/cash-icon.svg" width="20px" height="30px">
+                    <span class="h6">&nbsp;Cash</span>
+                </label>
+            </div>
+        </form>
+        </div>
+
+
+        <div class="col-6 ">
+            <div class="d-flex justify-content-between mb-2 dark-gray"><span>Subtotal</span><span><span
+                        class="currency-symbol ">EGP&nbsp;</span> <span class="currency ">{{subTotal}}</span></span></div>
+            <div class="d-flex justify-content-between mb-2"><span class="f-500">Delivery fee</span><span><span
+                        class="currency-symbol ">EGP&nbsp;</span> <span class="currency ">{{deliveryFee}}</span></span>
+            </div>
+            <div class="d-flex justify-content-between mt-4 mb-3"><span class="f-14 f-500">Total Amount</span><span><span
+                        class="currency-symbol f-14 f-500">EGP&nbsp;</span> <span class="currency f-14 f-500">{{subTotal +
+                        deliveryFee }}</span></span>
+            </div>
+            <div class="d-flex"><button (click)="placeOrder()" class="btn btn-success text-uppercase col-12">Place Order</button>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</div>

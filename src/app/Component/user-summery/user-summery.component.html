@@ -1,0 +1,177 @@
+<div id="over" style="display: none; width:60%; position: fixed; top: 15%; left:20%; z-index: 5;">
+    <div class="card">
+        <div class="card-header m-0 row h5" style="color:#ff5a00;">
+          <div class="col-11">
+                Order Summary
+            </div>
+            <div class="col-1 text-right" style=" cursor: pointer;" (click)="close()">
+                x
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="row col-12">
+                <div class="col-5 ">
+                    <p>Order Number</p> 
+                    <p>Restaurant</p>
+                    <p>Transaction Time</p>
+                </div>
+                <div class="col-7  " >
+                    <p>{{cur.id}}</p> 
+                    <p>{{cur.restaurant.store_name}}</p>
+                    <p>{{cur.created_at}}</p>
+                    
+                </div>
+            </div>
+
+            <div class="border m-2">
+                <div class="row bg-light border-bottom pt-2 m-0 col-12">
+                    <div class="col-6">
+                        <p><b>Items(s)</b></p>
+                    </div>
+                    <div class="col-2">
+                        <p><b>Qty</b></p>
+                    </div>
+                    <div class="col-2">
+                        <p><b>price</b></p>
+                    </div>
+                    <div class="col-2">
+                        <p><b>Total</b></p>
+                    </div>  
+                    
+                </div>
+                <div class="row bg-light border-bottom m-0 pt-2 col-12" *ngFor="let i of cur.products">
+                    <div class="col-6">
+                        <p>{{i.name}}</p>
+                    </div>
+                    <div class="col-2">
+                        <p>{{i.product_count}}</p>
+                    </div>
+                    <div class="col-2">
+                        <p>{{i.price}}</p>
+                    </div>
+                    <div class="col-2">
+                        <p>{{i.price * i.product_count}}</p>
+                    </div>  
+                   
+                </div>
+            </div>
+            <br>
+
+            <div class="row col-12">
+                <div class="col-8 ">
+                </div>
+                <div class="col-2 ">
+                    <p>Sub total</p>
+                    <p>Total</p>    
+                </div>    
+                <div class="col-2 ">
+                    <p>EGP {{getSub(cur.id)}}</p>
+                    <p>EGP {{cur.delivery_fee + getSub(cur.id)}}</p>    
+                </div>    
+            </div>
+        </div>
+      </div>
+</div>
+
+<div class="container" id="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5  bg-white ">
+            <button (click)="goto()" id="hover" type="button" class="btn mb-5 col-12 btn-primary text-dark btn-lg" style="background-color:white; border:solid 2px #ff5a00;"><b> Sign Out</b></button>
+
+            <div class="mt-4 mb-3">
+                <div class="mb-5 mb-m-3">
+                    <a href="/" class="text-dark" style="text-decoration: none;"  >Home</a>
+
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10 primary-text mx-4 f-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="20" width="20" color="#ff5a00">
+
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+
+                    <a class="text-dark" style="text-decoration: none;" href=""> My Account
+                    </a>
+      
+                </div>
+            </div>
+            <div>
+                <h3 class="bg-light mb-4 p-2 mt-4">My Account</h3>
+
+            </div>
+            <hr>
+            <div class="row m-3 ">
+                <div class="col-2 ">
+                    <div  id="info" class="row p-3 py-4 text-dark" style=" cursor: pointer;" (click)="selected('info', 'orders')">
+                        Account Info
+                    </div>
+                    <div  id="orders" class="row p-3 py-4 text-dark" style=" cursor: pointer;" (click)="selected('orders', 'info')">
+                        Your Orders
+                    </div>
+
+                </div>
+                <div class="col-10 border-left">
+
+                    <div id="info-details"  class="col-12 card p-3">
+                        <form name="form" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                              <label for="name">Name</label>
+                              <input type="text" class="form-control" name="name" [(ngModel)]="form.name" required value="userData.name" />
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required value="userData.email" />
+                            </div>
+                            <div class="form-group">
+                              <label for="pasword">Password</label>
+                              <input type="password" class="form-control" name="password" [(ngModel)]="form.password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="new_password">New Password</label>
+                                <input type="password" class="form-control" name="new_password" [(ngModel)]="form.new_password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" class="form-control" name="confirm_password" [(ngModel)]="form.confirm_password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile</label>
+                                <input type="text" class="form-control" name="mobile" [(ngModel)]="form.mobile">
+                            </div>
+                            <button id="hover" type="submit" class="btn mb-5 col-12 btn-primary text-dark btn-lg" style="background-color:white; border:solid 2px #ff5a00;"><b> Submit</b></button>
+
+                        </form>
+                        <div class="alert alert-success" *ngIf="isUpdated">
+                            Updated Successfully.
+                          </div>
+                      
+                    </div>
+                        
+
+
+
+
+                    <div id="order-details" class="col-12 card p-3">
+                        <div class="" *ngFor="let item of data">
+                            <div class="card hover mb-2" style=" cursor: pointer; " (click)="open(item.id)">
+                                <div class="card-body ml-2 row">
+                                    <div class="col-2 p-2 border text-center"><img width="90px" height="90px" src={{item.restaurant.image}}></div>
+                                    <div class="col-9 ml-4"><p class="h5">{{item.restaurant.store_name}}</p>
+                                                            <p>{{item.created_at}}</p>
+                                                            <p>Order id: {{item.id}}</p>
+                                                            <p>Status:{{getStatus(item.id)}}</p>
+                                    </div>
+                              </div>
+                              </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.card {
+  height: 100vh;
+  
+}
+
+.card-img {
+  height: 100vh;
+}
+
+.card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 75%;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.card-title {
+  color: orange;
+
+}
+
+.search {
+  outline: none;
+}
+
+.m-2 {
+  width: 40px;
+  height: 40px;
+}
+
+.rating-number {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.strar {
+  color: rgb(255, 90, 0);
+  font-size: 15px;
+}
+
+.svg-inline--fa {
+  width: 30px;
+}
+
+.ratings-count {
+  margin-left: 5px;
+}

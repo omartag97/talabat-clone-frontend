@@ -1,0 +1,65 @@
+
+
+  <!------------------------------------------------------------- nav bar ----------------------------------------------------------->
+  <div class="headerstyles__HeaderContainer-sc-1qyxbxn-0 gBTyed menu-closed ">
+    <div class="container px-m-0 mobile-header nav-bar navbar-expand-sm d-flex">
+
+      <!--Talabat logo -->
+      <a>
+        <img style=" cursor: pointer;"  (click)="goto()" class="headerstyles__Logo-sc-1qyxbxn-2 clwwCP nav-logo-img"
+          src="https://www.talabat.com/assets/images/logo.svg" width="144px" alt="Talabat Logo" height="100%">
+      </a>
+
+      <!-- start of ul list in nav bar-->
+      <div class="nav-menu" style="padding-left: 300px;">
+        <ul class="navbar-nav  d-inline">
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP pa-m-0 offers-li px-2">
+            <a class="headerstyles__NavLink-sc-1qyxbxn-5 eSpdEh pa-m-10 f-m-14" style="text-decoration: none;">Offers</a>
+          </li>
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP pa-m-0 become-partner-li px-2">
+            <a href="add" class="headerstyles__NavLink-sc-1qyxbxn-5 eSpdEh pa-m-10 f-m-14" style="text-decoration: none;">Become a
+              partner</a>
+          </li>
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP pa-m-0 px-2">
+            <a rel="noreferrer" href="all" class="headerstyles__NavLink-sc-1qyxbxn-5 eSpdEh pa-m-10 f-m-14"
+              style="text-decoration: none;">All Restaurants</a>
+          </li>
+          <!-- <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP d-sm-block px-2">
+          <a class="headerstyles__NavLink-sc-1qyxbxn-5 eSpdEh rtl" style="text-decoration: none;">العربية</a>
+        </li>-->
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP">
+            <a class="country-link px-m-4 py-m-2 px-3 nav-link">
+              <span class="flag flag-eg"></span>
+            </a>
+          </li>
+
+          <div class="cart-popoverstyles__CartPopoverContainer-sc-1ra2qq2-0 geywdR" *ngIf="getTotalCount() != 0">
+            <a href="#" class="pa-m-0 cart px-3 pt-2 nav-link" role="button">
+              <img src="https://www.talabat.com/assets/images/icon_cart.svg" alt="cart">
+              <span class="f-10" style="padding-left: 40%;">{{getTotalCount()}}</span>
+            </a>
+          </div>
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP pa-m-0 px-2" *ngIf="!isLoggedIn">
+            <button type="button" class="btn btn-login f-m-14 pa-m-10" (click)="goTo('login')">Login</button>
+          </li>
+
+          <li class="headerstyles__NavItem-sc-1qyxbxn-4 chnPVP pa-m-0 become-partner-li px-2" *ngIf="isLoggedIn">
+            <a rel="noreferrer" href="user-summary" class="headerstyles__NavLink-sc-1qyxbxn-5 eSpdEh pa-m-10 f-m-14"
+              style="text-decoration: none;">My Account</a>
+          </li>
+
+
+        </ul>
+      </div>
+      <!-- end of ul list in nav bar-->
+
+    </div>
+  </div>
+
+  <div style="height: 80px;">
+  </div>

@@ -1,0 +1,28 @@
+<div class="container">
+            <div class="row" >
+                <div class="col"></div>
+      
+      
+      
+                <div class="col-10 bg-success shadow-sm p-3 mb-5 bg-white ">
+                    <h2>Frequently Asked Questions (FAQ)</h2><hr/>
+  
+                    
+                        <div *ngFor="let i of viewFaq">
+
+                          <button class="accordion" (click)="toggle(i.id)">{{i.header}}</button>
+                          <div class="panel" style="display: none;" id={{i.id}}>
+                            <p> {{i.text}} </p>
+                          </div>
+                          
+                          <hr>
+
+                        
+                    </div>                      
+
+                </div>
+                <div class="col"></div>
+
+            </div>
+        </div>
+

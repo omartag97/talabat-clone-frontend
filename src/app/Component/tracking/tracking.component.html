@@ -1,0 +1,189 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 bg-success shadow-sm p-3 mb-5 bg-white ">
+
+
+            
+
+            
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle">Order Status</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row f-14 text-center">
+                        <p class="m-b-0 h6">
+                            <span>{{status}}
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+<br><br>
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle" style="">Order Summary</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row f-14">
+                        <div class="col-sm-10 m-t h5 m-t-0-m">{{getRestName()}}</div>
+                    </div>
+
+                    <div class="table-order-items">
+                        <table class="table m-a-0 m-t f-12-m">
+                            <tbody>
+                                <tr class="bg-light">
+                                    <th><b class="f-14 f-13-m">Item(s)</b></th>
+
+                                    <th class="text-center"><b class="f-14 f-13-m">Qty</b></th>
+                                    <th class="text-center item-price"><b class="f-14 f-13-m">Price</b></th>
+                                    <th class="text-center total"><b class="f-14 f-13-m">Total</b></th>
+                                </tr>
+                                <!--ng for-->
+                                <tr class="ng-scope" *ngFor="let item of checkOut">
+                                    <td class="v-middle">
+                                        <p class="m-a-0"><b> {{item.name}}</b></p>
+                                        <p class="text-727272 m-a-0 ng-binding"></p>
+                                    </td>
+
+                                    <td class="text-center v-middle ">{{getCount(item.id)}}</td>
+
+                                    <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{item.price}}</td>
+
+                                    <td class="text-center v-middle text-nowrap ">EGP&nbsp; {{item.price *
+                                        getCount(item.id)}}</td>
+
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+
+
+
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle" style="">Payment Summary</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="mb-3 d-flex justify-content-center p-4">
+                    
+
+                    <div class="col-6 ">
+                        <div class="d-flex justify-content-between mb-2 dark-gray"><span>Subtotal</span><span><span
+                                    class="currency-symbol ">EGP&nbsp;</span> <span
+                                    class="currency ">{{subTotal}}</span></span></div>
+                        <div class="d-flex justify-content-between mb-2"><span class="f-500">Delivery
+                                fee</span><span><span class="currency-symbol ">EGP&nbsp;</span> <span
+                                    class="currency ">{{deliveryFee}}</span></span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4 mb-3"><span class="f-14 f-500">Total
+                                Amount</span><span><span class="currency-symbol f-14 f-500">EGP&nbsp;</span> <span
+                                    class="currency f-14 f-500">{{subTotal +
+                                    deliveryFee }}</span></span>
+                        </div>
+                    
+
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+<br>
+<br>
+
+
+
+            <div class=" col-10 m-auto border rder-summary">
+                <div class="panel-heading">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="f-20 h3 v-middle">Delivery Adress</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row f-14">
+                        <p class="m-b-0 h6">Address Name:&nbsp;
+                            <span>{{address.address_name}}&nbsp;
+                            </span>
+                        </p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row f-14">
+                            <p class="m-b-0 h6">Area:&nbsp;
+                                <span>{{address.address_details}}&nbsp;
+                                </span>
+                            </p>
+                        </div>
+                        <div class="row f-14">
+                            <p class="m-b-0 h6">Mobile:&nbsp;
+                                <span>{{address.mobile}}&nbsp;
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br>
+            
+
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+
+.text-dark{
+    text-decoration: none;
+}
+.text-dark:hover {
+color:#ff5a00 !important;
+}
+
+
+.selected{
+    border-bottom: #ff5a00 solid 5px;
+}
