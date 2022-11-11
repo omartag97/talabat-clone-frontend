@@ -64,7 +64,7 @@ export class AuthRestServiceService {
       confirm_password,
       address:address,
       description:description,
-      logo: logo,
+      image: logo,
       longitude:longitude,
       latitude:latitude
     },
