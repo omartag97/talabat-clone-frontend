@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const API_URL = 'http://127.0.0.1:8000/api/restaurants/get-pended-orders';
-const API_URL3 = 'http://127.0.0.1:8000/api/restaurants/get-accepted-orders';
-const API_URL2 = 'http://127.0.0.1:8000/api/orders/set-order-status';
+const API_URL = 'https://talabat-iti.herokuapp.com/api/restaurants/get-pended-orders';
+const API_URL3 = 'https://talabat-iti.herokuapp.com/api/restaurants/get-accepted-orders';
+const API_URL2 = 'https://talabat-iti.herokuapp.com/api/orders/set-order-status';
 
 
 const TOKEN_KEY = 'auth-rest-token';

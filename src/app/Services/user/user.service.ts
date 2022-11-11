@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const API_URL = 'http://127.0.0.1:8000/api/users';
+const API_URL = 'https://talabat-iti.herokuapp.com/api/users';
 
-const AUTH_API= 'http://127.0.0.1:8000/api/users/update-user'
-const AUTH_API2= 'http://127.0.0.1:8000/api/users/get-user-data'
+const AUTH_API= 'https://talabat-iti.herokuapp.com/api/users/update-user'
+const AUTH_API2= 'https://talabat-iti.herokuapp.com/api/users/get-user-data'
 
 const TOKEN_KEY = 'auth-token';
 

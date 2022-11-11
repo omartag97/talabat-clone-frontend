@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const API_URL = 'http://127.0.0.1:8000/api/orders/add-orders';
-const API_URL2 = 'http://127.0.0.1:8000/api/orders/get-order-status';
+const API_URL = 'https://talabat-iti.herokuapp.com/api/orders/add-orders';
+const API_URL2 = 'https://talabat-iti.herokuapp.com/api/orders/get-order-status';
 
 const TOKEN_KEY = 'auth-token';
 const token: any = window.sessionStorage.getItem(TOKEN_KEY);

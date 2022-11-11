@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://127.0.0.1:8000/api/restaurants';
+const AUTH_API = 'https://talabat-iti.herokuapp.com/api/restaurants';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

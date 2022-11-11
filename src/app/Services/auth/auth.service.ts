@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://127.0.0.1:8000/api/users';
-const AUTH_API_DRIVER = 'http://127.0.0.1:8000/api/drivers';
+const AUTH_API = 'https://talabat-iti.herokuapp.com/api/users';
+const AUTH_API_DRIVER = 'https://talabat-iti.herokuapp.com/api/drivers';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://127.0.0.1:8000/api/restaurants';
-const AUTH_API2 = 'http://127.0.0.1:8000/api/restaurants/get-restaurant';
-const AUTH_API3 = 'http://127.0.0.1:8000/api/products/get-products';
+const AUTH_API = 'https://talabat-iti.herokuapp.com/api/restaurants';
+const AUTH_API2 = 'https://talabat-iti.herokuapp.com/api/restaurants/get-restaurant';
+const AUTH_API3 = 'https://talabat-iti.herokuapp.com/api/products/get-products';
 
 const TOKEN_KEY = 'auth-token';
 const token: any = window.sessionStorage.getItem(TOKEN_KEY);
