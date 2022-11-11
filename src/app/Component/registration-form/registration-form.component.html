@@ -2,7 +2,7 @@
   <div class="row m-auto">
     <div class="col border m-auto my-2">
 
-      <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <form *ngIf="!isSuccessful" name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
         <div class="form-group">
           <label for="name">name</label>
           <input type="text" class="form-control" name="name" [(ngModel)]="form.name" required minlength="3"
