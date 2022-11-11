@@ -56,7 +56,7 @@ export class TrackingComponent implements OnInit {
     private router: Router
   ) {
     this.orderId = router.getCurrentNavigation()?.initialUrl.queryParams['id'];
-    console.log(this.orderId);
+
   }
 
 
@@ -65,7 +65,7 @@ export class TrackingComponent implements OnInit {
 
     this.user.getDetails().subscribe({
       next: (data) => {
-        // console.log(data);
+
         this.address = data;
       },
       error: (e) => {

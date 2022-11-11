@@ -50,7 +50,6 @@ export class AuthRestServiceService {
     logo: FormData,
     longitude:any,
     latitude:any
-    // min_order , working_hours , delivery_time, (online_tracking) => boolean
     ): Observable<any> {
     return this.http.post(
       `${AUTH_API}/register`,
@@ -61,9 +60,11 @@ export class AuthRestServiceService {
       last_name:last_name,
       phone:phone,
       email:email,
+      password,
+      confirm_password,
       address:address,
       description:description,
-      logo: FormData,
+      logo: logo,
       longitude:longitude,
       latitude:latitude
     },
