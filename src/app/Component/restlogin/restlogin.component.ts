@@ -56,7 +56,7 @@ export class RestloginComponent implements OnInit {
 
   reloadPage(): void {
     if (this.isLoggedIn) {
-      this.router.navigate(['/orders']);
+      this.router.navigate(['orders']);
 
     }
   }
