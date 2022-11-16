@@ -54,10 +54,16 @@ export class RestloginComponent implements OnInit {
       );
   }
 
-  reloadPage(): void {
-    if (this.isLoggedIn) {
+  goto(){
+    if (this.isLoggedIn){
       this.router.navigate(['orders']);
-
     }
-  }
+    }
+
+  // reloadPage(): void {
+  //   if (this.isLoggedIn) {
+  //     this.router.navigate(['orders']);
+
+  //   }
+  // }
 }

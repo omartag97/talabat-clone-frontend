@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row m-auto" >
         <div class="col mt-3 m-auto">
-  
-  
-  
+
+
+
         <div class="col-12 bg-success text-center shadow-sm p-3 mb-5 bg-white ">
           <div class="m-auto col-8">
                       <h1 >Welcome to the Talabat login</h1><hr  style="color: #ff5a00;"/>
-  
+
     <p class="mb-2 text-muted">If you’re unable to login or recover your password (link below), please contact your account manager. </p>
       <form
         *ngIf="!isLoggedIn"
@@ -23,7 +23,7 @@
             type="text"
             class="form-control"
             name="email
-  
+
   "
             [(ngModel)]="form.email
   "
@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block"  style="background-color: #ff5a00; color: white; border: white; ">
+          <button (click)="goto()" class="btn btn-primary btn-block"  style="background-color: #ff5a00; color: white; border: white; ">
             Login
           </button>
         </div>
@@ -78,10 +78,9 @@
           </div>
         </div>
       </form>
-  
+
       <div class="alert alert-success" *ngIf="isLoggedIn">
         Logged in as {{ roles }}.
       </div>
     </div>
   </div>
-  
