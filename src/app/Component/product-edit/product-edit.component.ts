@@ -28,19 +28,19 @@ export class ProductEditComponent implements OnInit {
   id:any;
 
   constructor(private products:RestProductsService,
-    private router: Router) { 
+    private router: Router) {
 
       this.id = router.getCurrentNavigation()?.initialUrl.queryParams['id'];
       console.log(this.id);
-  
+
     }
 
   ngOnInit(): void {
-    
+
         this.products.getProduct(this.id).subscribe({
       next: (data) => {
         this.data = data.data;
-       
+
       },
       error: (e) => {
         console.log(e);
@@ -58,7 +58,7 @@ export class ProductEditComponent implements OnInit {
     console.log(name);
     this.products.editProduct(this.id, name, price).subscribe({
       next: (data) => {
-       
+
       },
       error: (e) => {
         console.log(e);
@@ -66,6 +66,9 @@ export class ProductEditComponent implements OnInit {
       complete: () => {
       },
     });
+  }
+  goto(){
+    this.router.navigate(['add-product']);
   }
 
 }
