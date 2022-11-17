@@ -68,7 +68,7 @@ export class ProductEditComponent implements OnInit {
     });
   }
   goto(){
-    this.router.navigate(['add-product']);
+    this.router.navigate(['rest-products']);
   }
 
 }
