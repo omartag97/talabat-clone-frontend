@@ -73,7 +73,6 @@ import { NaavBarComponent } from './Component/naav-bar/naav-bar.component';
       apiKey: 'AIzaSyD_kOcDJsWVrZ_S2aze1gR6N64C4p0SpuI',
       libraries: ['places']
     })
-
   ],
   providers: [],
   bootstrap: [AppComponent]
