@@ -64,11 +64,9 @@ export class ProductEditComponent implements OnInit {
         console.log(e);
       },
       complete: () => {
+    this.router.navigate(['rest-products']);
+
       },
     });
   }
-  goto(){
-    this.router.navigate(['rest-products']);
-  }
-
 }
