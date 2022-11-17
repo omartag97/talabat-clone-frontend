@@ -52,15 +52,10 @@ export class RestloginComponent implements OnInit {
           this.isLoginFailed = true;
         }
       );
-      complete: () => {
-        this.router.navigate(['orders']);
-        }
+
   }
 
-  // reloadPage(): void {
-  //   if (this.isLoggedIn) {
-  //     this.router.navigate(['orders']);
-
-  //   }
-  // }
+  goto(){
+    this.router.navigate(['orders']);
+  }
 }
