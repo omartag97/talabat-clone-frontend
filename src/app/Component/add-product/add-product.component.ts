@@ -63,8 +63,7 @@ export class AddProductComponent implements OnInit {
 
   }
   goto(){
-    this.router.navigate(['add-product']);
-
+    this.router.navigate(['rest-products']);
   }
 
 }
