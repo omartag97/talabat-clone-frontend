@@ -65,7 +65,6 @@ export class ProductEditComponent implements OnInit {
       },
       complete: () => {
     this.router.navigate(['rest-products']);
-
       },
     });
   }
