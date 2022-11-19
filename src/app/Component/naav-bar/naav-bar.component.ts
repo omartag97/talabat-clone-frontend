@@ -21,9 +21,6 @@ export class NaavBarComponent implements OnInit {
     else
       this.isLoggedIn = false;
 
-
-
-
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
     }

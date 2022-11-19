@@ -12,15 +12,15 @@
         <div class="card-body">
             <div class="row col-12">
                 <div class="col-5 ">
-                    <p>Order Number</p> 
+                    <p>Order Number</p>
                     <p>Restaurant</p>
                     <p>Transaction Time</p>
                 </div>
                 <div class="col-7  " >
-                    <p>{{cur.id}}</p> 
+                    <p>{{cur.id}}</p>
                     <p>{{cur.restaurant.store_name}}</p>
                     <p>{{cur.created_at}}</p>
-                    
+
                 </div>
             </div>
 
@@ -37,8 +37,8 @@
                     </div>
                     <div class="col-2">
                         <p><b>Total</b></p>
-                    </div>  
-                    
+                    </div>
+
                 </div>
                 <div class="row bg-light border-bottom m-0 pt-2 col-12" *ngFor="let i of cur.products">
                     <div class="col-6">
@@ -52,8 +52,8 @@
                     </div>
                     <div class="col-2">
                         <p>{{i.price * i.product_count}}</p>
-                    </div>  
-                   
+                    </div>
+
                 </div>
             </div>
             <br>
@@ -63,12 +63,12 @@
                 </div>
                 <div class="col-2 ">
                     <p>Sub total</p>
-                    <p>Total</p>    
-                </div>    
+                    <p>Total</p>
+                </div>
                 <div class="col-2 ">
                     <p>EGP {{getSub(cur.id)}}</p>
-                    <p>EGP {{cur.delivery_fee + getSub(cur.id)}}</p>    
-                </div>    
+                    <p>EGP {{cur.delivery_fee + getSub(cur.id)}}</p>
+                </div>
             </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
 
                     <a class="text-dark" style="text-decoration: none;" href=""> My Account
                     </a>
-      
+
                 </div>
             </div>
             <div>
@@ -147,9 +147,9 @@
                         <div class="alert alert-success" *ngIf="isUpdated">
                             Updated Successfully.
                           </div>
-                      
+
                     </div>
-                        
+
 
 
 
