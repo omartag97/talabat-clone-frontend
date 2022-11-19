@@ -43,19 +43,19 @@ export class RestloginComponent implements OnInit {
 
           this.isLoginFailed = false;
           this.isLoggedIn = true;
+          this.router.navigate(['orders']);
+
         //  this.reloadPage();
           //        this.roles = this.tokenStorage.getUser().roles;
-
         },
         err => {
           this.errorMessage = err.error.message;
           this.isLoginFailed = true;
-        }
+        },
+
       );
 
   }
 
-  // goto(){
-  //   this.router.navigate(['orders']);
-  // }
+
 }
