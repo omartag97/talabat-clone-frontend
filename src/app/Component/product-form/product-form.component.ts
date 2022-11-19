@@ -39,14 +39,13 @@ async updateImageFile(event: any) {
     const { name, price, image } = this.form;
     console.log(this.form);
     this.products.postProduct(name, price, image).subscribe({
-      next: (data) => {   
+      next: (data) => {
       },
       error: (e) => {
         console.log(e);
       },
       complete: () => {
         this.router.navigate(['rest-products']);
-
       },
     })
   }
