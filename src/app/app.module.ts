@@ -32,6 +32,7 @@ import { ProductEditComponent } from './Component/product-edit/product-edit.comp
 import { ProductFormComponent } from './Component/product-form/product-form.component';
 import { AgmCoreModule } from '@agm/core';
 import { NaavBarComponent } from './Component/naav-bar/naav-bar.component';
+import { OffersComponent } from './component/offers/offers.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { NaavBarComponent } from './Component/naav-bar/naav-bar.component';
     AddProductComponent,
     ProductEditComponent,
     ProductFormComponent,
-    NaavBarComponent
+    NaavBarComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

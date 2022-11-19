@@ -23,6 +23,7 @@ import { UserSummeryComponent } from './Component/user-summery/user-summery.comp
 import { AddProductComponent } from './Component/add-product/add-product.component';
 import { ProductEditComponent } from './Component/product-edit/product-edit.component';
 import { ProductFormComponent } from './Component/product-form/product-form.component';
+import { OffersComponent } from './component/offers/offers.component';
 
 const routes: Routes = [
 
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: 'rest-products', component: AddProductComponent },
   { path: 'product-edit', component: ProductEditComponent},
   { path: 'add-product', component: ProductFormComponent },
+  { path: 'offers', component: OffersComponent },
   { path: '**', component: HomeComponent },
 
 
